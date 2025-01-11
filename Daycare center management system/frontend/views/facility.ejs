@@ -1,0 +1,34 @@
+<!-- facility.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility Management</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+</head>
+<body>
+    <h1>Facility Management</h1>
+    
+    <!-- Display facilities -->
+    <h2>Facilities</h2>
+    <ul id="facilityList">
+        <% facilities.forEach(facility => { %>
+            <li><%= facility.name %></li>
+        <% }); %>
+    </ul>
+
+    <!-- Add new facility form -->
+    <h2>Add New Facility</h2>
+    <form id="addFacilityForm">
+        <label for="facilityName">Name:</label>
+        <input type="text" id="facilityName" name="name" required>
+        <button type="submit">Add Facility</button>
+    </form>
+
+    <!-- JavaScript for handling CRUD operations -->
+    <script src="/js/facility.js"></script>
+</body>
+</html>

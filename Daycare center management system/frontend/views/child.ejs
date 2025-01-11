@@ -1,0 +1,45 @@
+<!-- child.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Management</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+</head>
+
+<body>
+    <h1>Child Management</h1>
+
+    <!-- Form to add a new child -->
+    <form id="addChildForm">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+        <br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <br>
+        <label for="room">Room:</label>
+        <select id="room" name="room" required>
+            <!-- Options for selecting room dynamically populated from backend -->
+        </select>
+        <br>
+        <button type="submit">Add Child</button>
+    </form>
+
+    <!-- List to display existing children -->
+    <h2>Children:</h2>
+    <ul id="childList">
+        <!-- List items dynamically populated from backend -->
+    </ul>
+
+    <script src="/js/child.js"></script>
+</body>
+
+</html>
